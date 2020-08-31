@@ -10,7 +10,7 @@ const forecast = (lat,lon,callback)=>{
     }else if(response.body.message){
         callback("Unable to find location",undefined)
     }else{
-        callback(undefined,"Todays temp : "+response.body.current.temp)
+        callback(undefined,"Todays temp : "+response.body.current.temp+"\nHumidity : "+response.body.current.humidity)
     }  
 
     })
